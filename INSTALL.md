@@ -1,6 +1,6 @@
 #neural-style Installation
 
-This guide will walk you through the setup for `neural-style` on Ubuntu.
+This guide will walk you through the setup for `neural-style` on OSX.
 
 ## Step 1: Install torch7
 
@@ -10,6 +10,7 @@ First we need to install torch, following the installation instructions
 ```
 # in a terminal, run the commands
 cd ~/
+brew install gnuplot
 curl -s https://raw.githubusercontent.com/torch/ezinstall/master/install-deps | bash
 git clone https://github.com/torch/distro.git ~/torch --recursive
 cd ~/torch; ./install.sh
@@ -21,7 +22,8 @@ The second script also edits your `.bashrc` file so that torch is added to your 
 we need to source it to refresh our environment variables:
 
 ```
-source ~/.bashrc
+echo 'export PATH="/Users/admin/torch/install/bin:$PATH"' >>~/.bash_profile
+source ~/.bash_profile
 ```
 
 To check that your torch installation is working, run the command `th` to enter the interactive shell.
@@ -34,7 +36,7 @@ To quit just type `exit`.
 so we'll need to install that first:
 
 ```
-sudo apt-get install libprotobuf-dev protobuf-compiler
+brew install protobuf
 ```
 
 Now we can instal `loadcaffe`:
