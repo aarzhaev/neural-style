@@ -122,8 +122,10 @@ You can find detailed installation instructions for Ubuntu in the [installation 
 ## Usage
 Basic usage:
 ```
-th neural_style.lua -style_image <image.jpg> -content_image <image.jpg>
+th neural_style.lua -style_image <image.jpg> -content_image <image.jpg> -gpu -1
 ```
+If error "Wrong JPEG library version: library is 80, caller expects 62"
+http://mac-dev-env.patrickbougie.com/libjpeg/ 
 
 OpenCL usage with NIN Model (This requires you download the NIN Imagenet model files as described above):
 ```
